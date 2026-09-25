@@ -91,7 +91,3 @@ fe/
 - **화면에 장소가 표시되지 않음**: SQL 파일에는 장소 데이터가 없으므로 데이터가 입력되었는지 확인하세요.
 - **지도가 표시되지 않음**: 지도 클라이언트 ID와 허용 도메인을 확인하세요.
 - **API 요청 실패**: 백엔드가 8000번 포트에서 실행 중인지 확인하세요. 다른 포트를 사용한다면 `fe/src/utils/constants.ts`의 `BACKEND_URL`과 직접 지정된 주소(`fe/src/composables/api/useHashtagSearchApi.ts`)도 수정해야 합니다.
-
-## 공개 저장소에 올리기 전
-
-압축본에는 `be/.env`가 포함되어 있습니다. 이 파일이나 인증 정보를 이미 GitHub에 올렸다면 저장소에서 삭제하는 것과 별개로 해당 DB 비밀번호 및 API 키를 교체하세요. `fe/src/services/useNaverMap.ts`에 들어 있는 지도 클라이언트 ID도 자신의 값으로 변경하세요.
